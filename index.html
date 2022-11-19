@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+       
+    }
+  
+        .girl {
+       position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+      
+        background-size: cover;
+        position: relative;
+        overflow-x: hidden;
+     
+
+
+        }
+       
+      
+        .sal {
+    
+     position: fixed; 
+       left: 450px;
+       top: 450px;
+       width: 20%;
+    
+  animation-delay: 1s;
+  filter: 
+  drop-shadow(0 0 300px #ff6a00);
+       
+        }
+        
+        @keyframes show{
+	 0%{
+		 opacity:1;
+	 }
+    
+	 
+	 
+	 
+	 100% {
+		 opacity:1;
+	 }
+}
+@keyframes shot{
+	 0%{
+		 filter: blur(10px);
+	 }
+     50%{
+        filter: blur(5px);
+	 }
+	 
+	 
+	 100% {
+		filter: blur(0px);
+	 }
+}
+@keyframes opas{
+	 0%{
+        opacity:1;
+     }
+        0.5%{
+
+        opacity: 0.01;
+	 }
+	 100% {
+        opacity:0;
+        
+	 }
+}
+#fotobk {
+    position: fixed;
+    width: 100%;
+    
+   
+
+}
+
+
+</style>
+<audio src="mz.mp3" id="audio"></audio>
+<body>
+    
+   
+    <div class="world" >
+    
+        <img id="world"
+src="fon1.jpg" alt="" style=" min-height: 100vh;
+width: 100%;
+top: -100px;
+background-size: cover;
+position: fixed;
+overflow-x: hidden;
+
+display: block;" >
+    </div>
+
+
+<div class="sal" style="height:900px ; width: 900px;">
+<img id="sal"
+src="power.gif" alt="" style="width: 20%; position: fixed;">
+</div>
+
+
+
+<div class="girl" style="left: 0px;">
+<img id="girl"
+src="girl.png" alt="" style="width: 40%  ; position: fixed; left: 1070px; top: 450px;">
+    </div>
+    <div id="fotobk">
+        <img src="bk.png" style="width: 100%;">
+    </div>
+    
+</body>
+<script>
+    let i = 10;
+    const image = new Image()
+    audio = document.getElementById("audio");
+    window.onclick = function(){
+        document.getElementById('sal').style.display = 'block';
+        document.getElementById("sal").style.animation="show 200s 5"
+        document.getElementById("girl").style.animation="shot 20s 1";
+        document.getElementById("world").style.animation="shot 20s 1";
+        document.getElementById("sal").style.animation="shot 20s 1"
+        
+        
+        document.getElementById("fotobk").style.animation="opas 2000s 1"
+      audio.play();
+        
+    }
+    
+</script>
+
+</html>
